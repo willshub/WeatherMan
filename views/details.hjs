@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<h4> <a href="/weather"> home </a> </h4>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{ title }} {{ data.current_observation.display_location.city }}</h1>
+    <table class="gridtable">
+      <tr>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Country</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Elevation</th>
+        <th>Current Local Time</th>
+      </tr>
+      <tr>
+        <td>{{ data.current_observation.display_location.city }}</td>
+        <td>{{ data.current_observation.display_location.state_name }}</td>
+        <td>{{ data.current_observation.display_location.zip }}</td>
+        <td>{{ data.current_observation.display_location.country }}</td>
+        <td>{{ data.current_observation.display_location.latitude }}</td>
+        <td>{{ data.current_observation.display_location.longitude }}</td>
+        <td>{{ data.current_observation.display_location.elevation }}</td>
+        <td>{{ data.current_observation.local_time_rfc822 }}</td>
+      </tr>
+    </table>
+    <br><br><br><br>
+    <p>Check out the current weather in your favorite city!</p>
+    <table class="gridtable">
+      <tr>
+        <th>Weather</th>
+        <th>Temperature</th>
+        <th>Humidity</th>
+        <th>Wind</th>
+        <th>Pressure</th>
+        <th>Dewpoint</th>
+        <th>Visibility</th>
+        <th>UV Index</th>
+        <th>Precipitation</th>
+        <th>Visibility</th>
+      </tr>
+      <tr>
+        <td>{{ data.current_observation.weather }}</td>
+        <td>{{ data.current_observation.temperature_string }}</td>
+        <td>{{ data.current_observation.relative_humidity }}</td>
+        <td>{{ data.current_observation.wind_dir }} {{ data.current_observation.wind_mph }} mph</td>
+        <td>{{ data.current_observation.pressure_in }} in</td>
+        <td>{{ data.current_observation.dewpoint_string }}</td>
+        <td>{{ data.current_observation.visibility_mi }} mi</td>
+        <td>{{ data.current_observation.UV }}</td>
+        <td>{{ data.current_observation.precip_today_in }} in</td>
+        <td>{{ data.current_observation.visibility_mi }} mi</td>
+      </tr>
+    </table>
+  </body>
+</html>

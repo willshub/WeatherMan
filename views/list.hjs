@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>My favorite cities</p>
+    <table class="gridtable">
+      <tr>
+        <th>City</th>
+        <th>State</th>
+      </tr>
+      {{#weather.cities}}
+      <tr>
+        <td><a href="/weather/{{ city }}/{{state}}">{{ city }}</a></td>
+        <td>{{ state }}</td>
+      </tr>
+      {{/weather.cities}}
+    </tablae>
+  </body>
+</html>
