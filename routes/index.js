@@ -1,14 +1,6 @@
 var express = require('express');
 var weather = require('./weather');
-//var circle = require('./weather');
 var router = express.Router();
-
-
-/* *//*GET home page.*//*
-router.get('/', function(req, res) {
-    res.send('my ? home!');
-  //res.render('index', { title: 'Express' });
-});*/
 
 router.get('/', function(req, res) {
     //console.log(req.query);
@@ -17,7 +9,7 @@ router.get('/', function(req, res) {
 
 
 router.get('/weather', function(req, res) {
-    console.log('in here');
+    console.log(req.params);
 
     var response = weather.weatherDetails();
     res.render('list', response);
@@ -32,7 +24,7 @@ router.get('/weather/:state/:city', function(req, res) {
     var weatherRes = weather.performRequest('/api/', 'GET',
         query , { }, function(data) {
 
-        console.log('Fetched ' + data.current_observation.temperature_string + ' Temp');
+        //console.log('Fetched ' + data.current_observation.temperature_string + ' Temp');
         res.render('details', {title: "Weather Details for ", data: data});
 
     });

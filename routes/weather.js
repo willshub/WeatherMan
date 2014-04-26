@@ -53,7 +53,7 @@ function performRequest(endpoint, method, query, data, success) {
         });
 
         res.on('end', function() {
-            console.log(responseString);
+            //console.log(responseString);
             var responseObject = JSON.parse(responseString);
             success(responseObject);
         });

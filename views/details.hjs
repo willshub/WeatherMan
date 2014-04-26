@@ -45,7 +45,7 @@
         <th>Visibility</th>
       </tr>
       <tr>
-        <td>{{ data.current_observation.weather }}</td>
+        <td>{{ data.current_observation.weather }} <img src="{{data.current_observation.icon_url}}" alt="user-avatar" /></td>
         <td>{{ data.current_observation.temperature_string }}</td>
         <td>{{ data.current_observation.relative_humidity }}</td>
         <td>{{ data.current_observation.wind_dir }} {{ data.current_observation.wind_mph }} mph</td>
@@ -57,5 +57,8 @@
         <td>{{ data.current_observation.visibility_mi }} mi</td>
       </tr>
     </table>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <h5>Powered by Wunderground API <img src="{{data.current_observation.image.url}}" alt="user-avatar" /><h5>
   </body>
 </html>
