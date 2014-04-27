@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
     //console.log(req.query);
-    res.render('index', {title: "Weather Man", age: "29"});
+    res.render('index', {title: "Weather Man"});
 });
 
 
@@ -13,7 +13,6 @@ router.get('/weather', function(req, res) {
 
     var response = weather.weatherDetails();
     res.render('list', response);
-    //res.send(200)
 });
 
 router.get('/weather/:state/:city', function(req, res) {

@@ -6,8 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var weather = require('./routes/weather');
-//var users = require('./routes/users');
 console.log('running!!')
 
 var app = module.exports = express();
@@ -24,19 +22,6 @@ app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-//app.use('/weather', routes);
-//app.use('/users', users);
-
-
-//require('./routes');
-
-/*app.get('/', function(req, res, next) {
-    res.render('index', {title: 'My Node App'});
-});
-
-app.get('/api', function(req, res, next) {
-    res.send('/api', {name: 'Wilson', job: 'Coder'});
-});*/
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

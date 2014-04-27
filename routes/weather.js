@@ -9,8 +9,7 @@ var q_template = "/q";
 var return_template = ".json";
 
 function weatherDetails() {
-
-    console.log('in Weather JS 2');
+    console.log('Weather Home');
     var weather =  {"cities" : [{"city": "Austin","state": "TX"},{"city": "Campbell","state": "CA"},{"city": "Timonium","state": "MD"},{"city": "Omaha","state": "NE"}, {"city": "Chennai","state": "TamilNadu"}]};
 
     return {title: "Todays Weather", weather: weather};
