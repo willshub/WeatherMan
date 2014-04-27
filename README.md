@@ -5,7 +5,8 @@ The WeatherMan app is a simple application which shows the current weather at my
 
 It's an Node.js app built with Express.js framework using hogan templating.
 
-To run the app, I use nodemon so that I don't have to restart my Node.js app everytime I make a code change. I execute the below command.
+To run the app, I use nodemon so that I don't have to restart my Node.js app everytime I make a code change.
+Execute the below command at the project home directory.
 >nodemon bin/www
 
 The app runs by default on port 3000. This can be changed in the /bin/www file configurations
