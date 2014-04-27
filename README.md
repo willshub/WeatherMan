@@ -16,9 +16,9 @@ The app is initialized in the app.js file and the dependencies are listed out in
 
 The routes are defined in the index.js file. The weather.js file has all the business layer code.
 The following routes are available for the user
-/ -- Home
-/weather - Weather Home
-/weather/city/state - Current weather details for that city
+>/ -- Home
+>/weather - Weather Home
+>/weather/city/state - Current weather details for that city
 
 The weather details are obtained using the Wunderground API. Please refer to the API docs for reference.
 http://www.wunderground.com/weather/api/d/docs?MR=1
